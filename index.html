@@ -107,6 +107,39 @@ a{color:inherit}
 .qual .or{display:inline-block;margin:2px 0 6px;font-size:12px;font-weight:900;color:#fff;background:var(--wine);border-radius:999px;padding:0 10px}
 .callout{margin-top:22px;background:var(--ink);color:var(--on-dark);padding:20px 24px;border-left:4px solid var(--red);border-radius:2px}
 .callout b{color:#fff}
+/* 伍：學長經驗 */
+.cp .act{margin-top:6px!important;font-size:13px!important;font-weight:700;color:var(--wine)!important}
+.xp-lead{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
+.xp-lead blockquote{margin:10px 0 16px;font:600 clamp(22px,2.6vw,30px)/1.6 var(--serif);color:var(--ink);padding-left:16px;border-left:4px solid var(--red)}
+.xp-lead p{margin:0 0 12px;color:#5A4A3A;font-size:16px}
+.xp figure{margin:0}
+.xp figure img{width:100%;height:auto;border-radius:4px}
+.xp figcaption{font-size:13px;color:var(--muted);padding-top:6px}
+.legs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:18px}
+.leg{background:#fff;border:1px solid var(--line);border-radius:2px;overflow:hidden;display:flex;flex-direction:column}
+.leg img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.leg .tx{padding:16px 18px 18px}
+.leg .seg{font:600 13px var(--num);letter-spacing:.08em;color:var(--red)}
+.leg h4{margin:4px 0 2px;font-size:18px;line-height:1.4}
+.leg .km{font-size:13px;color:var(--muted);margin-bottom:10px}
+.leg ul{margin:0;padding-left:1.1em;font-size:14px;color:#5A4A3A;line-height:1.7}
+.leg li{margin-bottom:5px}
+.lesson{margin-top:28px;display:grid;grid-template-columns:auto 1fr;gap:22px;background:var(--wine);color:#fff;padding:24px 26px;border-radius:2px}
+.lesson .n{display:grid;place-items:center;width:56px;height:56px;border-radius:50%;background:#fff;color:var(--wine);font:900 32px var(--serif)}
+.lesson h4{margin:0 0 6px;font-size:20px}
+.lesson p{margin:0 0 10px;opacity:.95}
+.lesson ul{margin:0;padding-left:1.1em}
+.extra{margin-top:28px;display:grid;grid-template-columns:.8fr 1.2fr;gap:28px;align-items:start}
+.tips{list-style:none;margin:14px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.tips li{background:#fff;border:1px solid var(--line);border-left:3px solid var(--red);border-radius:2px;padding:9px 12px;font-size:14px;line-height:1.6}
+.tips li b{display:block;font-size:15px}
+.tips li span{color:var(--muted)}
+.buddy{margin-top:28px;background:var(--ink);color:var(--on-dark);padding:22px 24px;border-left:4px solid var(--red);border-radius:2px}
+.buddy h4{margin:0 0 6px;font-size:19px;color:#fff}
+.buddy p{margin:0}
+.buddy b{color:#fff}
+@media (max-width:960px){.xp-lead,.legs,.extra{grid-template-columns:1fr}}
+@media (max-width:600px){.tips{grid-template-columns:1fr}.lesson{grid-template-columns:1fr}}
 /* 準備小組 */
 .crew{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
 .gen{background:#fff;border:1px solid var(--line);border-top:4px solid var(--red);border-radius:2px;padding:16px 18px}
@@ -275,7 +308,8 @@ footer{background:var(--ink);color:var(--on-dark-muted);font-size:13px;padding:2
       <li><a href="#ch2"><b>貳</b>時間軸</a></li>
       <li><a href="#ch3"><b>參</b>強裝</a></li>
       <li><a href="#ch4"><b>肆</b>賽道規則</a></li>
-      <li><a href="#ch5"><b>伍</b>費用</a></li>
+      <li><a href="#ch5"><b>伍</b>學長經驗</a></li>
+      <li><a href="#ch6"><b>陸</b>費用</a></li>
     </ul>
   </div>
 </nav>
@@ -411,6 +445,7 @@ footer{background:var(--ink);color:var(--on-dark-muted);font-size:13px;padding:2
     <div class="gear" id="gear"></div>
     <div class="org"><span style="border:0;padding-left:0;color:var(--on-dark-muted)">大會提供：</span><span>號碼衣（穿最外層）</span><span>號碼布（掛背包外側）</span><span>計時晶片</span><span>GPS 定位追蹤器</span></div>
     <div class="warn"><b>檢查不合格怎麼辦：</b>第一次警告，補齊後才能出發；第二次被查到，取消比賽資格和成績。</div>
+    <p style="margin:16px 0 0;color:var(--on-dark-muted);font-size:15px">強裝只是最低要求。學長實際跑完後建議加帶的裝備，見 <a href="#ch5" style="color:#F2B27A">伍 學長經驗</a>。</p>
   </div>
 </section>
 
@@ -429,10 +464,10 @@ footer{background:var(--ink);color:var(--on-dark-muted);font-size:13px;padding:2
       <p>起終點、站點座標等賽道資訊戈21 是 7 月公布，戈22 的路線也要等公告。</p>
     </div>
     <div class="course">
-      <div class="cp"><div class="km">0<small>km</small></div><h4>昆侖障營地</h4><p>10/3 08:00 出發，全體 B 隊歡送</p></div>
-      <div class="cp"><div class="km">~40<small>km</small></div><h4>補給點・寄存箱 1</h4><p>取用自己的補給、換裝，建議換行動電源</p></div>
-      <div class="cp key"><div class="km">~80<small>km</small></div><h4>「去我執」抉擇點</h4><p>寄存箱 2。多數人到這裡時已入夜；可繼續最後 41 公里，也可「鳴金收兵」</p></div>
-      <div class="cp"><div class="km">121<small>km</small></div><h4>戈壁清泉</h4><p>10/4 14:00 關門，終點頒獎</p></div>
+      <div class="cp"><div class="km">0<small>km</small></div><h4>昆侖障營地</h4><p>10/3 08:00 出發，全體 B 隊歡送</p><p class="act">學長實測：07:30 出發</p></div>
+      <div class="cp"><div class="km">~40<small>km</small></div><h4>補給點・寄存箱 1</h4><p>取用自己的補給、換裝，建議換行動電源</p><p class="act">學長實測：CP5 旱峽營，45.5K</p></div>
+      <div class="cp key"><div class="km">~80<small>km</small></div><h4>「去我執」抉擇點</h4><p>寄存箱 2。多數人到這裡時已入夜；可繼續最後 41 公里，也可「鳴金收兵」</p><p class="act">學長實測：CP9 黃谷驛，88.1K，剩 32.6K</p></div>
+      <div class="cp"><div class="km">121<small>km</small></div><h4>戈壁清泉</h4><p>10/4 14:00 關門，終點頒獎</p><p class="act">學長實測：全程 120.7K</p></div>
     </div>
     <div class="rules">
       <div class="rule-c"><i>導</i><h4>自導航</h4><p>大會只給各 CP 座標，路線自己規劃，依序打卡。錯過打卡點要回頭補打。</p></div>
@@ -462,11 +497,62 @@ footer{background:var(--ink);color:var(--on-dark-muted);font-size:13px;padding:2
   </div>
 </section>
 
-<!-- 伍 費用 -->
-<section class="chapter" id="ch5" style="background-image:url(img/hug.jpg)">
+<!-- 伍 學長經驗 -->
+<section class="chapter" id="ch5" style="background-image:url(img/xp-night.jpg)">
   <div class="wrap">
     <div class="big">伍</div><div class="bar"></div>
-    <div><div class="no">CHAPTER 5</div><h2>費用與退費</h2><p>退費分四段，越晚退扣越多。</p></div>
+    <div><div class="no">CHAPTER 5</div><h2>學長經驗</h2><p>璁哥（張璁，戈十九 A、戈21 A+）的 121 公里實戰筆記。</p></div>
+  </div>
+</section>
+<section class="sec white xp">
+  <div class="wrap">
+    <div class="xp-lead">
+      <div>
+        <div class="eyebrow">FIELD NOTES</div>
+        <blockquote>這是與自己的競賽，或磨練，或修心，或享受。</blockquote>
+        <p>璁哥說，賽道不難、能力不難、裝備也不難，難的是老天會出什麼題目，永遠不知道。風沙、寒夜、小雨、迷路、受傷，只能一題一題化解，就像經營企業。助人也助己，這就是修心。</p>
+        <p>戈21 台灣 11 位 A+ 選手全數完賽，台大 5 人（林志文、張善順、林金財、王凌卿、張璁）最後一起跑進終點。這是台灣第一次全員安全完賽。</p>
+      </div>
+      <figure><img src="img/xp-finish.jpg" alt="台大五位 A+ 戈友一起跑向戈21 終點" loading="lazy"><figcaption>終點前，台大五人一起奔向戈壁清泉</figcaption></figure>
+    </div>
+
+    <h4 class="races-h">三段賽道，三種考驗<small>戈21 實際路線與距離，戈22 路線可能不同，但地形與氣候的挑戰相近</small></h4>
+    <div class="legs" id="legList"></div>
+
+    <div class="lesson">
+      <div class="n">!</div>
+      <div>
+        <h4>最大的教訓：保護口鼻和呼吸道</h4>
+        <p>風沙、寒風，加上一路吃甜的補給、喝冷水，呼吸道會慢慢受損，自己卻渾然不覺。璁哥賽後在車上呼吸不順、心悸，喝了熱湯後一直吐黑痰，才發現問題出在這裡。正賽 A、B 隊時間短，可能不明顯；A+ 長達一天一夜，就會變成大問題。</p>
+        <ul>
+          <li>多帶一條薄圍脖，全程拉到口鼻</li>
+          <li>鼻孔、嘴唇塗凡士林</li>
+          <li>到大站先吃鹹食、喝熱湯，少吃甜的、少喝冷水</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="extra">
+      <figure><img src="img/xp-gear.jpg" alt="璁哥戈21 A+ 賽後裝備全攤開" loading="lazy"><figcaption>璁哥的戈21 A+ 全套裝備</figcaption></figure>
+      <div>
+        <h4 class="races-h" style="margin-top:0">強裝之外，璁哥建議加帶<small>非大會強制，是學長實際用過、覺得救命的東西</small></h4>
+        <ul class="tips" id="extraList"></ul>
+      </div>
+    </div>
+
+    <div class="buddy">
+      <h4>可以自己跑，也可以一起跑</h4>
+      <p>每個人追求的目標不同，但彼此照顧的心意是連在一起的：裝備缺了有人借，賽道上有人氣喘有醫生戈友幫忙，夥伴賽前受傷就陪著用走的。台大 5 人依能力兩兩一組、互相照應，目標就是<b>全員平安完賽</b>。</p>
+    </div>
+    <p class="fine">摘自張璁〈戈21 A+ 投稿心得〉，經整理改寫。</p>
+  </div>
+</section>
+
+<!-- 陸 費用 -->
+<section class="chapter" id="ch6" style="background-image:url(img/hug.jpg)">
+  <div class="wrap">
+    <div class="big">陸</div><div class="bar"></div>
+    <div><div class="no">CHAPTER 6</div><h2>費用與退費</h2><p>退費分四段，越晚退扣越多。</p></div>
   </div>
 </section>
 <section class="sec">
@@ -533,7 +619,8 @@ const TIMELINE = [
     c:[ ['照「參」強裝清單逐項採購、核對規格',''],
         ['背全套強裝跑一次 50K 以上長距離',''],
         ['夜跑演練：兩顆頭燈、夜間導航、低溫換裝',''],
-        ['測試補給：多少熱量、哪些食物吃得下','強裝要求隨身至少 500 千卡'] ] },
+        ['測試補給：多少熱量、哪些食物吃得下','強裝要求隨身至少 500 千卡；大站改吃鹹食、喝熱湯'],
+        ['練習時試戴圍脖護口鼻，準備學長建議的加帶裝備','參考「伍 學長經驗」：防沙套、遠射手電筒、輕薄雨衣等'] ] },
   { d:'8/28 12:00', s:'參考戈21', t:'退費最後節點', tag:'退費', money:true, why:'過了這個時間退賽，報名費全部不退。', c:[] },
   { d:'2027.9', s:'賽前 1 個月', t:'保險、寄存、行程', why:'大會有團體意外險，但章程要求自己另外買一份涵蓋全程的意外險。',
     c:[ ['購買個人意外險，保期涵蓋報到日到返程日','戈21 為 10/2–10/5'],
@@ -562,6 +649,53 @@ document.getElementById('crewN').textContent = CREW.reduce((n, g) => n + g.m.len
 document.getElementById('crewList').innerHTML = CREW.map(g => `
   <div class="gen"><h4>${esc(g.g)}<span>${g.m.length} 人</span></h4><ul>${g.m.map(p =>
     `<li><b>${esc(p[0])}</b><small>${esc(p[1])}</small><i class="${p[2] === 'T' ? 't' : ''}">${esc(p[2])} 隊</i></li>`).join('')}</ul></div>`).join('');
+
+/* 學長經驗：摘自張璁〈戈21 A+ 投稿心得〉 */
+const LEGS = [
+  { seg:'PART 1', title:'CP1 昆侖障 → CP5 旱峽營', km:'45.5K｜白天、風沙、龜殼路', img:'img/xp-day.jpg', alt:'白天的戈壁賽道',
+    tips:['實際 07:30 出發，早上涼：頭套、眼鏡、脖圍、袖套、手套、長褲，從頭到腳先薄薄包起來',
+          '跑熱脫下的小東西，馬上請夥伴塞進背包。璁哥沿路掉了手套和脖圍，晚上就吃苦頭',
+          '白戈壁風沙大，細沙會讓襪子變硬、磨腳背：防沙套必帶，或在 CP5、CP9 換襪',
+          '直線捷徑上下起伏傷腿；沿車道繞一點但比較平',
+          '站距約 7.3–11 公里，輕鬆 7 分速即可，補給站喝水補給後立刻出發',
+          'CP4 火車邊道、CP5 前的龜殼路，風沙大又難跑'] },
+  { seg:'PART 2', title:'CP5 旱峽營 → CP9 黃谷驛', km:'42.6K（累計 88.1K）｜烈日轉入夜', img:'img/xp-night.jpg', alt:'夜間頭燈照著戈壁上的跑者',
+    tips:['到 CP5 先吃鹹食、喝熱湯，別再吃甜的、喝冷水，讓呼吸道緩一下',
+          '換襪子、防沙套，補手套和脖圍，帶上衝鋒衣、雨褲、頭燈、行動電源：這段會天黑',
+          'CP5 出發前會再驗一次強裝',
+          '更長的龜殼路，步幅放小，用快走',
+          '遇到小雨，衝鋒衣還是會濕，外面再套輕薄雨衣就不冷',
+          '天黑後頭燈加遠射手電筒，找旗子和小型藍、綠、紅燈，對照手錶 GPX',
+          'CP8 空谷驛到 CP9 地形彎繞、還有柵欄，最容易迷路'] },
+  { seg:'PART 3', title:'CP9 去我執 → CP12 水道 → 戈壁清泉', km:'32.6K（全程 120.7K）｜寒夜到天亮', img:'img/xp-dawn.jpg', alt:'黎明時的黑戈壁',
+    tips:['戈21 有 8 人在 CP9「去我執」停下。這裡有熱羊肉湯、小米粥，多吃一點',
+          '寄存箱多備一套：薄羽絨、較厚衝鋒衣；薄衝鋒衣綁腰轉到前面護大腿；兩層手套；新襪、防沙套、凡士林',
+          '夜裡燈具不嫌多：兩顆頭燈、兩個行動電源、兩支遠射手電筒',
+          'CP9 出發強裝檢查更嚴格：長褲、衝鋒衣、羽絨衣、頭燈、行動電源',
+          '夜裡停下來很快就冷到骨子裡，休息時間要短',
+          'CP12 會遇到正賽 A、B 隊，為了不影響他們，A+ 改走水道',
+          '上下起伏、軟硬交錯的地形最適合用手杖；最後 3 公里石碑處整裝，脫掉多餘衣物'] }
+];
+document.getElementById('legList').innerHTML = LEGS.map(l => `
+  <article class="leg"><img src="${l.img}" alt="${esc(l.alt)}" loading="lazy"><div class="tx">
+    <div class="seg">${l.seg}</div><h4>${esc(l.title)}</h4><div class="km">${esc(l.km)}</div>
+    <ul>${l.tips.map(t => `<li>${esc(t)}</li>`).join('')}</ul></div></article>`).join('');
+
+const EXTRA = [
+  ['防沙套','長距離必帶，不然細沙會磨腳'],
+  ['遠射手電筒','夜裡找旗子、看遠方，比頭燈好用'],
+  ['輕薄雨衣','小雨、寒風時套在最外層，「神奇的裝備」'],
+  ['多一條薄圍脖','拉到口鼻，保護呼吸道'],
+  ['凡士林','擦腳防磨，也塗鼻孔、嘴唇'],
+  ['薄羽絨衣','CP9 之後的寒夜必備'],
+  ['第二件衝鋒衣','厚的穿上，薄的綁腰護大腿'],
+  ['兩層手套','薄的白天用，晚上再加一層厚的'],
+  ['手杖（選配）','上下起伏、軟硬交錯的地形最有用'],
+  ['咖啡因錠','入夜出發前補一顆'],
+  ['寄存箱多放一套換裝','CP5、CP9 各一套，以防萬一'],
+  ['面速力達母','護口鼻、擦傷口']
+];
+document.getElementById('extraList').innerHTML = EXTRA.map(e => `<li><b>${esc(e[0])}</b><span>${esc(e[1])}</span></li>`).join('');
 
 /* 推薦賽事：戈友在「戈22A+共跑練習計劃」群組分享，新增時加一筆即可 */
 const RACES = [
