@@ -42,8 +42,9 @@ a{color:inherit}
 .plate img.wm-img.big{width:var(--wm-w);height:auto!important}
 .plate>img:not(.wm-img){height:calc(var(--wm-w) * .34)!important}
 /* 大標誌放在白底板上，比照歷屆紅字白底 */
-.plate{display:inline-flex!important;align-items:center;gap:clamp(10px,2vw,22px);background:#fff;padding:clamp(14px,2.4vw,24px) clamp(18px,3vw,32px);border-radius:10px;box-shadow:0 10px 40px rgba(0,0,0,.35)}
-.plate>img{height:clamp(84px,12vw,140px)!important;margin:0!important;filter:none!important;width:auto}
+/* 透明底：直接疊在照片上，加陰影讓紅字在深色背景上仍清楚 */
+.plate{display:inline-flex!important;align-items:center;gap:clamp(10px,2vw,22px);padding:6px 0}
+.plate>img{height:clamp(84px,12vw,140px)!important;margin:0!important;width:auto;filter:drop-shadow(0 2px 6px rgba(0,0,0,.7)) drop-shadow(0 0 18px rgba(0,0,0,.5))!important}
 .brand .logo{font-size:19px}
 .brand .logo small{font-size:15px;font-weight:700;color:var(--on-dark-muted);margin-left:.5em;letter-spacing:.08em}
 .nav ul{list-style:none;margin:0;padding:0;display:flex;gap:2px}
@@ -271,7 +272,7 @@ footer{background:var(--ink);color:var(--on-dark-muted);font-size:13px;padding:2
   <div class="wrap">
     <div class="road"><span class="seal">戈</span>台大EMBA戈友會</div>
     <div class="kicker">給跑過 A、B 隊的戈友</div>
-    <h1><span class="logo plate"><img class="wm-img big" src="img/gobi22-wordmark.png" alt="戈22 第二十二屆玄奘之路戈壁挑戰賽"><img src="img/gobi-plus-mark.svg" alt="A+"></span><span class="sub">準備站</span></h1>
+    <h1><span class="logo plate"><img class="wm-img big" src="img/gobi22-wordmark-dark.png" alt="戈22 第二十二屆玄奘之路戈壁挑戰賽"><img src="img/gobi-plus-mark.svg" alt="A+"></span><span class="sub">準備站</span></h1>
     <div class="rule"></div>
     <p class="lead">一天一夜、121 公里、自導航、自補給。我們再回一次戈壁：挑戰自己、享受賽道，也照顧身邊需要幫忙的人。</p>
     <p class="note">本頁依〈戈21 A+ 賽事章程〉（2026 年 4 月版）整理。標示 <span class="ref">參考戈21</span> 的日期與數字，戈22 可能調整，一切以戈22 正式章程為準。</p>
@@ -468,7 +469,7 @@ footer{background:var(--ink);color:var(--on-dark-muted);font-size:13px;padding:2
 
 <section class="closing">
   <div class="wrap">
-    <div class="logo plate" style="margin-bottom:32px"><img class="wm-img big" src="img/gobi22-wordmark.png" alt="戈22 第二十二屆玄奘之路戈壁挑戰賽"><img src="img/gobi-plus-mark.svg" alt="A+"></div>
+    <div class="logo plate" style="margin-bottom:32px"><img class="wm-img big" src="img/gobi22-wordmark-dark.png" alt="戈22 第二十二屆玄奘之路戈壁挑戰賽"><img src="img/gobi-plus-mark.svg" alt="A+"></div>
     <h2>再回一次戈壁<span>這次，一天走完</span></h2>
     <p>繼續是勇氣，收兵亦是智慧。每一種選擇，都是圓滿。</p>
   </div>
