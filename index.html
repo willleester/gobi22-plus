@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>戈22 A+ 準備站｜台大EMBA戈友會</title>
+<meta name="description" content="給跑過 A、B 隊的戈友：戈22 A+ 121 公里的資格、時間軸 checklist、強制裝備與規則重點（依戈21 A+ 章程整理，以戈22 正式章程為準）。">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="img/gobi-plus-mark.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@600;900&family=Oswald:wght@500;600&display=swap" rel="stylesheet">
+<style>
+/* 風格沿用戈友會網站 index.html：深棕黑、朱紅、米白紙、章節「壹貳參肆」 */
+:root{
+  --ink:#16110D; --dark:#221A12; --paper:#F3EADB; --sand:#D8CAB2;
+  --red:#C0341B; --wine:#7C1A1E; --amber:#E07B22;
+  --text:#2B2117; --muted:#7A6A57; --line:#E2D6C2;
+  --on-dark:#F3EADB; --on-dark-muted:#B8A890;
+  --serif:"Noto Serif TC",serif; --sans:"Noto Sans TC",sans-serif; --num:"Oswald","Noto Sans TC",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{margin:0;font-family:var(--sans);color:var(--text);background:var(--paper);line-height:1.75;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+.ref{display:inline-block;font-size:.74em;font-weight:700;line-height:1.6;padding:0 .7em;border-radius:999px;border:1px dashed var(--amber);color:#A4520C;background:#FFF4E6;white-space:nowrap;vertical-align:1px}
+.dark .ref{background:rgba(224,123,34,.12);color:#F2B27A}
+
+/* 導覽列 */
+.nav{position:sticky;top:0;z-index:20;background:rgba(22,17,13,.92);backdrop-filter:blur(8px);color:var(--on-dark)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
+.seal{display:inline-grid;place-items:center;width:34px;height:34px;background:var(--red);color:#fff;font:900 20px var(--serif);border-radius:3px;flex:none}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:.06em;text-decoration:none;white-space:nowrap}
+/* 戈22 A+ 標誌：「戈22」字樣＋玄奘之路 A+ 筆刷標誌（img/gobi-plus-mark.svg，取自 03戈17A+.ai） */
+.logo{display:inline-flex;align-items:center;gap:.18em;font-weight:900;letter-spacing:.04em;line-height:1;white-space:nowrap}
+.logo img{height:1.5em;width:auto;margin-top:-.2em}
+.brand .logo{font-size:19px}
+.brand .logo small{font-size:15px;font-weight:700;color:var(--on-dark-muted);margin-left:.5em;letter-spacing:.08em}
+.nav ul{list-style:none;margin:0;padding:0;display:flex;gap:2px}
+.nav li a{display:block;padding:6px 11px;border-radius:6px;text-decoration:none;font-size:15px;color:var(--on-dark-muted)}
+.nav li a:hover{color:#fff;background:rgba(255,255,255,.08)}
+.nav li a b{font-family:var(--serif);color:var(--red);margin-right:4px}
+
+/* 封面 */
+.hero{position:relative;min-height:min(88vh,700px);display:flex;align-items:flex-end;color:#fff;background:var(--ink) url(img/team-gobi-plus.jpg) center/cover no-repeat}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(22,17,13,.94) 0%,rgba(22,17,13,.75) 50%,rgba(22,17,13,.3) 100%),linear-gradient(0deg,rgba(22,17,13,.9),rgba(22,17,13,0) 50%)}
+.hero .wrap{position:relative;width:100%;padding-top:100px;padding-bottom:64px}
+.hero .road{display:flex;align-items:center;gap:12px;font-weight:900;font-size:18px;letter-spacing:.12em}
+.hero .kicker{margin:36px 0 10px;font-size:17px;letter-spacing:.08em}
+.hero .kicker::before{content:"";display:inline-block;width:28px;height:2px;background:var(--red);vertical-align:middle;margin-right:12px}
+.hero h1{margin:0;font:900 clamp(44px,7.5vw,88px)/1.15 var(--sans);letter-spacing:.06em}
+.hero h1 .logo{font-size:1em;gap:.12em}
+.hero h1 .logo img{height:1.45em;margin-top:-.28em;filter:drop-shadow(0 4px 18px rgba(0,0,0,.45))}
+.hero h1 .sub{display:block;margin-top:.12em;font-size:.5em;letter-spacing:.3em;color:var(--on-dark)}
+.hero .rule{width:min(420px,70%);height:2px;background:var(--red);margin:24px 0 20px}
+.hero .lead{max-width:640px;font-size:clamp(16px,1.8vw,19px);color:var(--on-dark)}
+.hero .note{margin-top:18px;font-size:14px;color:var(--on-dark-muted)}
+
+/* 數字列 */
+.stats{background:var(--dark);color:var(--on-dark)}
+.stats .wrap{display:grid;grid-template-columns:repeat(5,minmax(0,1fr))}
+.stat{padding:26px 16px;border-left:1px solid rgba(243,234,219,.1)}
+.stat:first-child{border-left:0}
+.stat b{display:block;font:600 clamp(30px,3.6vw,44px)/1 var(--num);color:#fff}
+.stat b em{font-style:normal;font-size:.5em;color:var(--red);margin-left:4px}
+.stat span{display:block;margin-top:8px;font-size:14px;color:var(--on-dark-muted)}
+
+/* 章節頁 */
+.chapter{position:relative;color:#fff;background:var(--ink) center/cover no-repeat;min-height:300px;display:flex;align-items:center}
+.chapter::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(22,17,13,.93) 35%,rgba(22,17,13,.5))}
+.chapter .wrap{position:relative;display:flex;align-items:center;gap:36px;width:100%;padding-top:56px;padding-bottom:56px}
+.chapter .big{font:900 clamp(84px,12vw,140px)/1 var(--serif);color:var(--paper)}
+.chapter .bar{width:2px;align-self:stretch;background:var(--red)}
+.chapter .no{font-size:14px;letter-spacing:.5em;color:var(--on-dark-muted)}
+.chapter h2{margin:6px 0 8px;font:900 clamp(32px,4.6vw,50px)/1.2 var(--sans);letter-spacing:.16em}
+.chapter p{margin:0;font-size:17px;color:var(--on-dark)}
+
+/* 區塊 */
+.sec{padding:72px 0}
+.sec.dark{background:var(--dark);color:var(--on-dark)}
+.sec.white{background:#FBF7F0}
+.head{margin-bottom:32px;max-width:780px}
+.eyebrow{font:600 14px var(--num);letter-spacing:.3em;color:var(--red)}
+.head h3{margin:8px 0 10px;font:900 clamp(24px,3vw,34px)/1.35 var(--sans);letter-spacing:.05em}
+.head h3 span{color:var(--red)}
+.head p{margin:0;color:var(--muted);font-size:17px}
+.dark .head p{color:var(--on-dark-muted)}
+
+/* 壹：資格 */
+.quals{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.qual{background:#fff;border:1px solid var(--line);border-top:4px solid var(--red);padding:20px 22px;border-radius:2px}
+.qual .k{font-size:13px;font-weight:700;letter-spacing:.1em;color:var(--red)}
+.qual h4{margin:4px 0 10px;font-size:19px}
+.qual ul{margin:0;padding-left:1.1em;color:#5A4A3A}
+.qual li{margin-bottom:6px}
+.qual .or{display:inline-block;margin:2px 0 6px;font-size:12px;font-weight:900;color:#fff;background:var(--wine);border-radius:999px;padding:0 10px}
+.callout{margin-top:22px;background:var(--ink);color:var(--on-dark);padding:20px 24px;border-left:4px solid var(--red);border-radius:2px}
+.callout b{color:#fff}
+
+/* 貳：時間軸 checklist */
+.progress{position:sticky;top:60px;z-index:5;background:var(--paper);padding:12px 0 14px;margin-bottom:22px;border-bottom:1px solid var(--line)}
+.progress .row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font-size:14px;color:var(--muted)}
+.progress .row b{font:600 22px var(--num);color:var(--ink)}
+.progress .track{height:8px;background:var(--line);border-radius:999px;overflow:hidden;margin-top:6px}
+.progress .track i{display:block;height:100%;width:0;background:var(--red);border-radius:999px;transition:width .3s}
+.progress button{font:inherit;font-size:13px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;padding:2px 12px;cursor:pointer}
+.progress button:hover{color:var(--wine);border-color:var(--wine)}
+.tline{position:relative;list-style:none;margin:0;padding:0}
+.tline::before{content:"";position:absolute;left:128px;top:8px;bottom:8px;width:2px;background:var(--sand)}
+.tline>li{position:relative;display:grid;grid-template-columns:110px 1fr;gap:40px;padding:0 0 34px}
+.tline>li::before{content:"";position:absolute;left:121px;top:10px;width:16px;height:16px;border-radius:50%;background:var(--paper);border:2px solid var(--red);box-shadow:0 0 0 5px var(--paper)}
+.tline>li.alldone::before{background:var(--red)}
+.tline>li.race::before{background:var(--wine);border-color:var(--wine);width:20px;height:20px;left:119px;top:8px}
+.tline .d{font:600 18px/1.35 var(--num);color:var(--ink);text-align:right;letter-spacing:.03em}
+.tline .d small{display:block;font:400 13px var(--sans);color:var(--muted)}
+.tline h4{margin:0 0 4px;font-size:19px;letter-spacing:.02em}
+.tline h4 .tag{display:inline-block;margin-left:8px;font-size:12px;font-weight:700;color:#fff;background:var(--wine);padding:1px 10px;border-radius:999px;vertical-align:3px}
+.tline h4 .tag.money{background:var(--amber);color:#2B1500}
+.tline .why{margin:0 0 10px;color:#5A4A3A;font-size:15px}
+.checks{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.checks label{display:flex;gap:10px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:3px;padding:9px 12px;cursor:pointer;font-size:15px;line-height:1.6}
+.checks label:hover{border-color:var(--sand)}
+.checks input{flex:none;width:18px;height:18px;margin:3px 0 0;accent-color:var(--red)}
+.checks input:checked+span{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--sand)}
+.checks small{display:block;color:var(--muted);font-size:13px;text-decoration:none}
+
+/* 參：強裝 */
+.gear{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.gear label{display:flex;gap:12px;align-items:flex-start;background:rgba(243,234,219,.05);border:1px solid rgba(243,234,219,.14);border-radius:3px;padding:12px 14px;cursor:pointer}
+.gear label:hover{border-color:rgba(243,234,219,.3)}
+.gear input{flex:none;width:18px;height:18px;margin:4px 0 0;accent-color:var(--red)}
+.gear .n{flex:none;font:600 15px/1.7 var(--num);color:var(--red);width:22px}
+.gear b{display:block;color:#fff;font-size:16px}
+.gear span{display:block;font-size:14px;color:var(--on-dark-muted);line-height:1.6}
+.gear em{font-style:normal;color:#F2B27A}
+.gear input:checked~div b{color:var(--on-dark-muted);text-decoration:line-through}
+.gear-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin:0 0 12px}
+.gear-head h4{margin:0;font-size:18px;color:#fff}
+.gear-head span{font:600 18px var(--num);color:var(--on-dark-muted)}
+.org{margin-top:22px;display:flex;flex-wrap:wrap;gap:8px}
+.org span{border:1px solid rgba(243,234,219,.25);border-radius:999px;padding:4px 14px;font-size:14px}
+.warn{margin-top:22px;border:1px solid var(--wine);background:rgba(124,26,30,.3);padding:18px 22px;border-radius:2px}
+.warn b{color:#fff}
+
+/* 肆：賽道與規則 */
+.course{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin-bottom:28px;background:#fff;border:1px solid var(--line);border-radius:2px;overflow:hidden}
+.cp{padding:18px 18px 20px;border-left:1px solid var(--line);position:relative}
+.cp:first-child{border-left:0}
+.cp .km{font:600 30px/1 var(--num);color:var(--red)}
+.cp .km small{font-size:14px;color:var(--muted);margin-left:2px}
+.cp h4{margin:8px 0 4px;font-size:17px}
+.cp p{margin:0;font-size:14px;color:#5A4A3A}
+.cp.key{background:#FFF7EE}
+.rules{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.rule-c{background:#fff;border:1px solid var(--line);padding:18px 20px;border-radius:2px}
+.rule-c i{font:900 24px var(--serif);font-style:normal;color:var(--red)}
+.rule-c h4{margin:4px 0 6px;font-size:17px}
+.rule-c p,.rule-c ul{margin:0;font-size:14px;color:#5A4A3A}
+.rule-c ul{padding-left:1.1em}
+.tbl-wrap{overflow-x:auto;margin-top:28px}
+.tbl{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);min-width:560px}
+.tbl th,.tbl td{padding:12px 16px;border-bottom:1px solid var(--line);text-align:left;font-size:15px;vertical-align:top}
+.tbl th{background:var(--ink);color:var(--paper);font-weight:700;font-size:14px;letter-spacing:.06em}
+.tbl td.m{font:600 18px var(--num);color:var(--red);white-space:nowrap}
+.tbl td.p{font-family:var(--num);color:var(--muted);white-space:nowrap}
+.tbl tr:last-child td{border-bottom:0}
+.team-goal{margin-top:28px;display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:center;background:var(--red);color:#fff;padding:26px 28px;border-radius:2px}
+.team-goal .n{font:600 72px/1 var(--num)}
+.team-goal .n small{font-size:22px;margin-left:4px}
+.team-goal h4{margin:0 0 6px;font-size:21px}
+.team-goal p{margin:0;opacity:.95}
+
+/* 伍：費用 */
+.fee{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:start}
+.price{background:var(--ink);color:var(--on-dark);padding:26px;border-radius:2px}
+.price b{display:block;font:600 52px/1 var(--num);color:#fff}
+.price b small{font-size:18px;margin-left:6px;color:var(--on-dark-muted)}
+.price .usd{margin-top:6px;font-family:var(--num);font-size:18px;color:var(--sand)}
+.price p{margin:14px 0 0;font-size:14px;color:var(--on-dark-muted)}
+.refund{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.refund li{display:grid;grid-template-columns:150px 1fr auto;gap:14px;align-items:center;background:#fff;border:1px solid var(--line);padding:12px 16px;border-radius:2px;font-size:15px}
+.refund .when{font:600 16px var(--num);color:var(--ink)}
+.refund .pct{font:600 20px var(--num);color:var(--red);white-space:nowrap}
+.refund li.ok .pct{color:#2F6B3A}
+.refund small{display:block;color:var(--muted);font-size:13px}
+.fine{margin-top:12px;font-size:14px;color:var(--muted)}
+
+/* 結尾 */
+.closing{position:relative;color:#fff;background:var(--ink) url(img/desert.jpg) center/cover no-repeat;text-align:center;padding:120px 0 100px}
+.closing::before{content:"";position:absolute;inset:0;background:rgba(22,17,13,.62)}
+.closing .wrap{position:relative}
+.closing h2{margin:0;font:900 clamp(34px,5.5vw,64px)/1.3 var(--sans);letter-spacing:.12em}
+.closing h2 span{color:var(--red);display:block}
+.closing p{margin:20px auto 0;max-width:620px;font-size:17px;color:var(--on-dark)}
+.closing a.back{display:inline-block;margin-top:28px;border:1px solid rgba(255,255,255,.55);padding:8px 20px;border-radius:999px;text-decoration:none;font-size:15px}
+.closing a.back:hover{background:rgba(255,255,255,.12)}
+footer{background:var(--ink);color:var(--on-dark-muted);font-size:13px;padding:22px 0;text-align:center;line-height:1.8}
+
+@media (max-width:960px){
+  .nav ul{display:none}
+  .stats .wrap{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .stat:nth-child(4){border-left:0}
+  .quals,.gear,.rules,.fee{grid-template-columns:1fr}
+  .course{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cp:nth-child(3){border-left:0}
+  .cp:nth-child(n+3){border-top:1px solid var(--line)}
+}
+@media (max-width:600px){
+  .wrap{padding:0 16px}
+  .stats .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .stat{border-left:0;border-top:1px solid rgba(243,234,219,.1);padding:18px 8px}
+  .chapter .wrap{gap:18px}
+  .tline::before{left:7px}
+  .tline>li{grid-template-columns:1fr;gap:4px;padding-left:32px}
+  .tline>li::before{left:0}
+  .tline>li.race::before{left:-2px}
+  .tline .d{text-align:left}
+  .sec{padding:56px 0}
+  .refund li{grid-template-columns:1fr auto}
+  .refund .when{grid-column:1/-1}
+  .team-goal{grid-template-columns:1fr;gap:8px}
+  .course{grid-template-columns:1fr}
+  .cp{border-left:0!important;border-top:1px solid var(--line)}
+  .cp:first-child{border-top:0}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="主選單">
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="logo">戈22<img src="img/gobi-plus-mark.svg" alt="A+"><small>準備站</small></span></a>
+    <ul>
+      <li><a href="#ch1"><b>壹</b>資格</a></li>
+      <li><a href="#ch2"><b>貳</b>時間軸</a></li>
+      <li><a href="#ch3"><b>參</b>強裝</a></li>
+      <li><a href="#ch4"><b>肆</b>賽道規則</a></li>
+      <li><a href="#ch5"><b>伍</b>費用</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="road"><span class="seal">戈</span>台大EMBA戈友會</div>
+    <div class="kicker">給跑過 A、B 隊的戈友</div>
+    <h1><span class="logo">戈22<img src="img/gobi-plus-mark.svg" alt="A+"></span><span class="sub">準備站</span></h1>
+    <div class="rule"></div>
+    <p class="lead">一天一夜、121 公里、自導航、自補給。我們再回一次戈壁：挑戰自己、享受賽道，也照顧身邊需要幫忙的人。</p>
+    <p class="note">本頁依〈戈21 A+ 賽事章程〉（2026 年 4 月版）整理。標示 <span class="ref">參考戈21</span> 的日期與數字，戈22 可能調整，一切以戈22 正式章程為準。</p>
+  </div>
+</header>
+
+<section class="stats" aria-label="賽事數字">
+  <div class="wrap">
+    <div class="stat"><b>121<em>km</em></b><span>單人全程</span></div>
+    <div class="stat"><b>30<em>hr</em></b><span>總關門時間</span></div>
+    <div class="stat"><b>80<em>km</em></b><span>「去我執」抉擇點</span></div>
+    <div class="stat"><b>16<em>項</em></b><span>自備強制裝備</span></div>
+    <div class="stat"><b>10<em>人</em></b><span>團隊獎門檻</span></div>
+  </div>
+</section>
+
+<!-- 壹 資格 -->
+<section class="chapter" id="ch1" style="background-image:url(img/run.jpg)">
+  <div class="wrap">
+    <div class="big">壹</div><div class="bar"></div>
+    <div><div class="no">CHAPTER 1</div><h2>能不能報名</h2><p>先盤點證書、年齡與身體狀況，缺什麼現在補還來得及。</p></div>
+  </div>
+</section>
+<section class="sec white">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">ELIGIBILITY</div>
+      <h3>符合<span>任一</span>資格即可報名</h3>
+      <p>注意：跑過 A 或 B 隊不是報名條件本身。章程看的是<b>越野賽完賽證書</b>，或過去的 A+ 完賽證書。</p>
+    </div>
+    <div class="quals">
+      <div class="qual">
+        <div class="k">基礎資格</div>
+        <h4>越野賽完賽證書</h4>
+        <ul>
+          <li>近兩年內 <b>100 公里以上</b>越野賽完賽證書 1 張</li>
+          <li style="list-style:none;margin-left:-1.1em"><span class="or">或</span></li>
+          <li>兩年內 <b>50 公里以上</b>越野賽完賽證書 <b>2 張</b></li>
+        </ul>
+      </div>
+      <div class="qual">
+        <div class="k">直通資格</div>
+        <h4>過去的 A+ 完賽證書</h4>
+        <ul>
+          <li>戈21 章程：戈16～戈20 的 A+ 完賽證書可直通</li>
+          <li>戈22 是否改成戈17～戈21 <span class="ref">待戈22 章程確認</span></li>
+        </ul>
+      </div>
+      <div class="qual">
+        <div class="k">年齡</div>
+        <h4>18–63 歲</h4>
+        <ul>
+          <li>以比賽年份減出生年份計算（不看生日）</li>
+          <li>戈22 若比照辦理：1964–2009 年出生 <span class="ref">推估</span></li>
+          <li>46 歲以上進「大師組」另外排名</li>
+        </ul>
+      </div>
+      <div class="qual">
+        <div class="k">身體</div>
+        <h4>體檢自查＋心臟平板</h4>
+        <ul>
+          <li>開賽前 6 個月內體檢，無心臟病、心肌炎、冠狀動脈疾病、嚴重心律不整、嚴重高血壓、腦血管疾病、血糖控制不佳的糖尿病</li>
+          <li>心臟平板運動測試<b>陰性</b>報告，6 個月內有效</li>
+          <li>大會不提供評估，結果由自己判斷能否參賽</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout"><b>現在最該做的事：</b>翻出近兩年的越野賽證書。如果還沒有 100K，或 50K 不到兩場，就趁 2027 年上半年排好比賽補齊，並保留證書檔案。</div>
+  </div>
+</section>
+
+<!-- 貳 時間軸 -->
+<section class="chapter" id="ch2" style="background-image:url(img/field.jpg)">
+  <div class="wrap">
+    <div class="big">貳</div><div class="bar"></div>
+    <div><div class="no">CHAPTER 2</div><h2>時間軸 checklist</h2><p>從現在到終點的每個關卡。勾選紀錄只存在你自己的瀏覽器。</p></div>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">TIMELINE</div>
+      <h3>11 個月，<span>一步一步</span>走到起點</h3>
+      <p>月份依戈21 的日程往後推一年估算；戈22 正式日期公布後再更新。</p>
+    </div>
+    <div class="progress">
+      <div class="row"><span>我的進度　<b id="pDone">0</b> / <span id="pAll">0</span></span><button type="button" id="reset">清除勾選</button></div>
+      <div class="track"><i id="pBar"></i></div>
+    </div>
+    <ol class="tline" id="timeline"></ol>
+  </div>
+</section>
+
+<!-- 參 強裝 -->
+<section class="chapter" id="ch3" style="background-image:url(img/desert.jpg)">
+  <div class="wrap">
+    <div class="big">參</div><div class="bar"></div>
+    <div><div class="no">CHAPTER 3</div><h2>強制裝備</h2><p>報到日統一檢查，起點與 CP 隨機抽查，全程隨身攜帶。</p></div>
+  </div>
+</section>
+<section class="sec dark">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">MANDATORY GEAR</div>
+      <h3>自備 16 項，<span>橘字</span>是最常不合格的規格</h3>
+      <p>採購前對照規格，打包時再勾一次。</p>
+    </div>
+    <div class="gear-head"><h4>個人準備</h4><span id="gDone">0 / 16</span></div>
+    <div class="gear" id="gear"></div>
+    <div class="org"><span style="border:0;padding-left:0;color:var(--on-dark-muted)">大會提供：</span><span>號碼衣（穿最外層）</span><span>號碼布（掛背包外側）</span><span>計時晶片</span><span>GPS 定位追蹤器</span></div>
+    <div class="warn"><b>檢查不合格怎麼辦：</b>第一次警告，補齊後才能出發；第二次被查到，取消比賽資格和成績。</div>
+  </div>
+</section>
+
+<!-- 肆 賽道與規則 -->
+<section class="chapter" id="ch4" style="background-image:url(img/finish.jpg)">
+  <div class="wrap">
+    <div class="big">肆</div><div class="bar"></div>
+    <div><div class="no">CHAPTER 4</div><h2>賽道與規則</h2><p>戈21 首次啟用「東歸之路」路線，起點由全體 B 隊歡送出發。</p></div>
+  </div>
+</section>
+<section class="sec white">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">COURSE</div>
+      <h3>戈21 A+ 賽道 <span class="ref">參考戈21</span></h3>
+      <p>起終點、站點座標等賽道資訊戈21 是 7 月公布，戈22 的路線也要等公告。</p>
+    </div>
+    <div class="course">
+      <div class="cp"><div class="km">0<small>km</small></div><h4>昆侖障營地</h4><p>10/3 08:00 出發，全體 B 隊歡送</p></div>
+      <div class="cp"><div class="km">~40<small>km</small></div><h4>補給點・寄存箱 1</h4><p>取用自己的補給、換裝，建議換行動電源</p></div>
+      <div class="cp key"><div class="km">~80<small>km</small></div><h4>「去我執」抉擇點</h4><p>寄存箱 2。多數人到這裡時已入夜；可繼續最後 41 公里，也可「鳴金收兵」</p></div>
+      <div class="cp"><div class="km">121<small>km</small></div><h4>戈壁清泉</h4><p>10/4 14:00 關門，終點頒獎</p></div>
+    </div>
+    <div class="rules">
+      <div class="rule-c"><i>導</i><h4>自導航</h4><p>大會只給各 CP 座標，路線自己規劃，依序打卡。錯過打卡點要回頭補打。</p></div>
+      <div class="rule-c"><i>補</i><h4>自補給</h4><p>打卡點只提供飲用水（看天氣提供熱水）。其餘靠自己背，或放在 40K、80K 寄存箱。</p></div>
+      <div class="rule-c"><i>存</i><h4>寄存</h4><ul><li>2 個寄存箱：40K、80K 各一，賽後統一運到終點</li><li>1 個寄存袋：起點寄存非賽道用品，直接運到終點</li><li>都要貼姓名貼或封條，不能放易碎、易燃、易爆物品</li></ul></div>
+      <div class="rule-c"><i>關</i><h4>關門時間</h4><p>部分站點設有關門時間，沒在時間內出站就強制退賽。退賽者可拿到已完成賽段的成績證明。</p></div>
+      <div class="rule-c"><i>醫</i><h4>醫療強制退賽</h4><ul><li>意識障礙（AVPU 達 V 以下）並伴隨抽搐</li><li>骨折、嚴重軟組織損傷、無法控制的出血</li><li>哮喘發作無法處置，或醫療組判定須離開賽道就醫</li></ul></div>
+      <div class="rule-c"><i>退</i><h4>退賽之後</h4><p>退賽隊員一律搭撤站車回終點，不另外派車；不能繼續在賽道上前進，離開賽道要經大會確認。</p></div>
+    </div>
+
+    <div class="tbl-wrap">
+      <table class="tbl">
+        <thead><tr><th>獎牌</th><th>男子</th><th>女子</th><th>男子平均配速</th></tr></thead>
+        <tbody>
+          <tr><td class="m">金</td><td>16 小時內</td><td>17 小時內</td><td class="p">7'56"/km 以內</td></tr>
+          <tr><td class="m">銀</td><td>16–18 小時</td><td>17–19 小時</td><td class="p">8'56"/km 以內</td></tr>
+          <tr><td class="m">銅</td><td>18–30 小時</td><td>19–30 小時</td><td class="p">14'53"/km 以內</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="fine">配速以 121 公里換算，包含停站時間，僅供配速規劃參考。另設總排名、青年組（18–45 歲）、大師組（46–63 歲）的男女前三名。在 80K「鳴金收兵」者單獨排名，可獲專屬獎章與官方完賽證書，但不參加評獎。成績＝完賽時間＋罰時；中途搭乘交通工具、接受外部協助，成績都不列計。</p>
+
+    <div class="team-goal">
+      <div class="n">10<small>人</small></div>
+      <div><h4>「戈壁老炮兒」團隊獎：我們的共同目標</h4><p>同一院校或官方認證的戈友組織，A+ <b>實際出賽</b>達 10 人以上就能拿到。戈21 台大 A+ 有 5 人，戈22 一起找齊 10 位老戈友。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 伍 費用 -->
+<section class="chapter" id="ch5" style="background-image:url(img/hug.jpg)">
+  <div class="wrap">
+    <div class="big">伍</div><div class="bar"></div>
+    <div><div class="no">CHAPTER 5</div><h2>費用與退費</h2><p>退費分四段，越晚退扣越多。</p></div>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap">
+    <div class="fee">
+      <div class="price">
+        <div class="eyebrow">ENTRY FEE <span class="ref">參考戈21</span></div>
+        <b style="margin-top:12px">9,800<small>人民幣／人</small></b>
+        <div class="usd">或 USD 1,460／人</div>
+        <p>包含賽事組織、計時裁判、賽道補給、營地保障、醫療救援、衛星定位、通訊安保、保險、文物管理費、獎牌證書、賽事交通、安全培訓。<br>不含：往返敦煌的機票、自己加保的意外險、裝備。</p>
+      </div>
+      <div>
+        <ul class="refund">
+          <li class="ok"><span class="when">7/15 18:00 前</span><span>退賽</span><span class="pct">全額退</span></li>
+          <li><span class="when">7/15 18:00 – 8/9 24:00</span><span>退賽</span><span class="pct">扣 10%</span></li>
+          <li><span class="when">8/10 00:00 – 8/28 12:00</span><span>退賽</span><span class="pct">扣 30%</span></li>
+          <li><span class="when">8/28 12:00 後</span><span>退賽</span><span class="pct">不退費</span></li>
+        </ul>
+        <p class="fine">日期為戈21 版本。退費只退本金，一律以人民幣結算退回原匯款帳戶，匯差與手續費自行負擔，不計利息。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="wrap">
+    <div class="logo" style="font-size:clamp(36px,5vw,56px);margin-bottom:24px">戈22<img src="img/gobi-plus-mark.svg" alt="A+"></div>
+    <h2>再回一次戈壁<span>這次，一天走完</span></h2>
+    <p>繼續是勇氣，收兵亦是智慧。每一種選擇，都是圓滿。</p>
+  </div>
+</section>
+<footer><span class="logo" style="font-size:16px;color:var(--on-dark)">戈22<img src="img/gobi-plus-mark.svg" alt="A+"></span>　台大EMBA戈友會・準備小組<br>資料來源：玄奘之路戈壁挑戰賽 A+ 賽事章程（戈21，2026 年 4 月）。本頁為戈友內部整理，以大會公布的戈22 章程與補充章程為準。</footer>
+
+<script>
+/* 時間軸：月份依戈21 日程推估戈22，正式日期公布後改這裡 */
+const TIMELINE = [
+  { d:'2026.11–12', s:'即刻開始', t:'組成準備小組', why:'先把有意願的戈友找齊，目標 10 人以上出賽，拿「戈壁老炮兒」團隊獎。',
+    c:[ ['加入戈22 A+ 準備小組群組',''],
+        ['盤點近兩年的越野賽完賽證書','100K 1 場，或 50K 2 場；直通者確認自己的 A+ 證書'],
+        ['確認年齡在 18–63 歲範圍內','以比賽年份減出生年份計算'] ] },
+  { d:'2027.1–3', s:'冬季', t:'補資格、打底', why:'證書不夠的人，這段時間要報名、跑完資格賽。',
+    c:[ ['報名上半年的 100K 或 50K 越野賽','記得完賽後下載、保存完賽證書'],
+        ['建立每週長距離訓練（含爬升）',''],
+        ['開始練習用 GPS 手錶或手機 App 跟軌跡導航','A+ 全程自導航'] ] },
+  { d:'2027.4', s:'參考戈21', t:'戈22 A+ 章程公布', tag:'章程', why:'戈21 章程是 4 月發布。拿到新版後，先比對本頁有哪些地方改了。',
+    c:[ ['讀完戈22 A+ 章程，比對資格、日期、費用、強裝的變動',''],
+        ['確認報名方式與截止日',''] ] },
+  { d:'2027.4–6', s:'參考戈21', t:'報名繳費、跑完資格賽', tag:'報名', why:'報名費戈21 為人民幣 9,800 元或美金 1,460 元。',
+    c:[ ['完成報名與繳費',''],
+        ['資格賽完賽，證書上傳／存檔',''],
+        ['安排體檢（開賽前 6 個月內）','約 4 月以後做才有效'] ] },
+  { d:'2027.6–7', s:'參考戈21', t:'心臟平板測試', why:'報告 6 個月內有效，要能涵蓋到 10 月比賽日；報名成功後上傳電子版。',
+    c:[ ['預約並完成心臟平板運動測試','結果須為陰性'],
+        ['上傳電子版報告',''],
+        ['另外印一份紙本，報到日要交',''] ] },
+  { d:'2027.7', s:'參考戈21', t:'賽道資訊公布', tag:'路線', why:'戈21 是 7 月公布起終點與站點座標。',
+    c:[ ['下載官方推薦軌跡，匯入 GPS 手錶或導航 App',''],
+        ['研究 40K、80K 寄存點位置與關門時間',''],
+        ['擬定配速與停站計畫','金牌男 16hr／女 17hr；關門 30hr'] ] },
+  { d:'7/15 18:00', s:'參考戈21', t:'全額退費截止', tag:'退費', money:true, why:'這之前退賽不扣費；之後扣 10%，8/10 起扣 30%，8/28 中午後不退。',
+    c:[ ['最後確認：身體、工作、家庭都能成行',''] ] },
+  { d:'2027.8', s:'賽前 2 個月', t:'強裝採購與實戰演練', why:'裝備規格不合格會被警告，第二次被查到就取消資格。',
+    c:[ ['照「參」強裝清單逐項採購、核對規格',''],
+        ['背全套強裝跑一次 50K 以上長距離',''],
+        ['夜跑演練：兩顆頭燈、夜間導航、低溫換裝',''],
+        ['測試補給：多少熱量、哪些食物吃得下','強裝要求隨身至少 500 千卡'] ] },
+  { d:'8/28 12:00', s:'參考戈21', t:'退費最後節點', tag:'退費', money:true, why:'過了這個時間退賽，報名費全部不退。', c:[] },
+  { d:'2027.9', s:'賽前 1 個月', t:'保險、寄存、行程', why:'大會有團體意外險，但章程要求自己另外買一份涵蓋全程的意外險。',
+    c:[ ['購買個人意外險，保期涵蓋報到日到返程日','戈21 為 10/2–10/5'],
+        ['規劃 40K、80K 寄存箱內容','補給、換裝、備用行動電源；80K 後是夜路'],
+        ['訂往返敦煌機票（戈21 報到地在瓜州）',''],
+        ['和準備小組對齊集合與交通安排',''] ] },
+  { d:'10/2', s:'參考戈21', t:'瓜州報到日', tag:'比賽週', why:'簽到、領賽包、定裝照、強裝檢查、寄存、賽事說明會。',
+    c:[ ['交心臟平板紙本報告',''],
+        ['再簽一次《參賽聲明》',''],
+        ['通過強裝檢查，交寄存箱、寄存袋','貼好姓名貼或封條'] ] },
+  { d:'10/3–4', s:'參考戈21', t:'121 公里，出發！', tag:'比賽', race:true, why:'10/3 06:30 瓜州集合，08:00 鳴槍；10/4 14:00 關門、終點頒獎，13:00–15:00 返回敦煌；10/5 自由返程。',
+    c:[ ['08:00 從昆侖障營地出發',''],
+        ['80K「去我執」：繼續，或鳴金收兵',''],
+        ['抵達戈壁清泉，和戈友會合','']] }
+];
+
+const GEAR = [
+  ['頭燈 2 個＋備用電池','<em>亮度 >200 流明</em>；腰燈可代替 1 個，應急閃燈不能代替'],
+  ['智慧型手機 1 支','電量充足；可自備或租衛星電話'],
+  ['飲用水 ≥1.5 公升','<em>容器要有清楚的容量標示</em>，可多個加總'],
+  ['食物／能量膠 ≥500 千卡','<em>包裝要有熱量標示</em>，沒標示的一律以 300 千焦計（約 72 千卡）'],
+  ['急救包 1 個','無菌紗布、<em>彈性繃帶 ≥100×6cm（醫用繃帶不合格）</em>、水泡處理工具、酒精棉棒 ≥10 支、眼藥水／洗眼液、<em>保溫毯 ≥140×210cm 且包裝有尺寸</em>'],
+  ['防風防水外套（外層）','附帽兜，<em>接縫與拉鍊全壓膠</em>；皮膚衣、風衣、輕便雨衣都不合格'],
+  ['保暖衣褲（中層）','長袖上衣與長褲，建議各 200g 以上；刷毛、羊毛、P 棉為佳；壓縮褲＋長襪也可以'],
+  ['排汗內衣褲（內層）','有吸濕排汗功能的貼身衣物'],
+  ['手持 GPS 導航設備','GPS 手錶或裝了導航 App 的手機，<em>要先匯入官方軌跡</em>'],
+  ['行動電源 2 個','<em>容量要清楚標示</em>，建議各 ≥10,000mAh；出發帶 1 個，寄存 1 個'],
+  ['應急閃燈 1 個','青蛙燈或其他 LED 燈；<em>頭燈、手電筒不能代替</em>'],
+  ['救生哨','確定吹得響'],
+  ['防風鏡 1 副','<em>要包覆眼眶周圍</em>，一般墨鏡、太陽眼鏡不合格'],
+  ['隨身水杯 ≥150ml','喝熱飲用，大會不提供紙杯'],
+  ['保暖帽','羊毛或刷毛，<em>要蓋過耳朵</em>；外套附的防水保暖帽可代替'],
+  ['手套','全指手套']
+];
+
+/* 勾選紀錄只存在本機瀏覽器 */
+const KEY = 'ge22aplus-checks';
+let state = {};
+try { state = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch (e) { state = {}; }
+function save(){ try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} }
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+const tl = document.getElementById('timeline');
+tl.innerHTML = TIMELINE.map((it, i) => {
+  const tag = it.tag ? `<span class="tag${it.money ? ' money' : ''}">${esc(it.tag)}</span>` : '';
+  const checks = it.c.map((c, j) => {
+    const id = `t${i}-${j}`;
+    return `<li><label><input type="checkbox" data-id="${id}"><span>${esc(c[0])}${c[1] ? `<small>${esc(c[1])}</small>` : ''}</span></label></li>`;
+  }).join('');
+  const ref = it.s === '參考戈21' ? '<small><span class="ref">參考戈21</span></small>' : `<small>${esc(it.s)}</small>`;
+  return `<li class="${it.race ? 'race' : ''}" data-step="${i}"><div class="d">${esc(it.d)}${ref}</div><div><h4>${esc(it.t)}${tag}</h4><p class="why">${esc(it.why)}</p>${checks ? `<ul class="checks">${checks}</ul>` : ''}</div></li>`;
+}).join('');
+
+const gear = document.getElementById('gear');
+gear.innerHTML = GEAR.map((g, i) =>
+  `<label><input type="checkbox" data-id="g${i}"><span class="n">${i + 1}</span><div><b>${esc(g[0])}</b><span>${g[1]}</span></div></label>`
+).join('');
+
+function refresh(){
+  const tlBoxes = [...tl.querySelectorAll('input')];
+  const done = tlBoxes.filter(b => b.checked).length;
+  document.getElementById('pDone').textContent = done;
+  document.getElementById('pAll').textContent = tlBoxes.length;
+  document.getElementById('pBar').style.width = (tlBoxes.length ? done / tlBoxes.length * 100 : 0) + '%';
+  tl.querySelectorAll(':scope > li').forEach(li => {
+    const bs = [...li.querySelectorAll('input')];
+    li.classList.toggle('alldone', bs.length > 0 && bs.every(b => b.checked));
+  });
+  const gb = [...gear.querySelectorAll('input')];
+  document.getElementById('gDone').textContent = `${gb.filter(b => b.checked).length} / ${gb.length}`;
+}
+document.querySelectorAll('input[data-id]').forEach(b => {
+  b.checked = !!state[b.dataset.id];
+  b.addEventListener('change', () => { state[b.dataset.id] = b.checked; save(); refresh(); });
+});
+document.getElementById('reset').addEventListener('click', () => {
+  if (!confirm('確定清除所有勾選紀錄？')) return;
+  state = {}; save();
+  document.querySelectorAll('input[data-id]').forEach(b => b.checked = false);
+  refresh();
+});
+refresh();
+</script>
+</body>
+</html>
