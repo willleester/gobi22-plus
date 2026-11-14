@@ -36,6 +36,13 @@ a{color:inherit}
 /* 戈22 A+ 標誌：「戈22」字樣＋玄奘之路 A+ 筆刷標誌（img/gobi-plus-mark.svg，取自 03戈17A+.ai） */
 .logo{display:inline-flex;align-items:center;gap:.18em;font-weight:900;letter-spacing:.04em;line-height:1;white-space:nowrap}
 .logo img{height:1.5em;width:auto;margin-top:-.2em}
+/* 「戈22」屆別字樣：比照歷屆（戈14、戈15）紅色粗斜體＋斑駁筆刷質感，由下方 script 產生 SVG */
+.wm{display:inline-block;line-height:0}
+.wm svg{height:1.15em;width:auto;overflow:visible}
+.wm.big svg{height:clamp(92px,13vw,150px)}
+/* 大標誌放在白底板上，比照歷屆紅字白底 */
+.plate{display:inline-flex!important;align-items:center;gap:clamp(10px,2vw,22px);background:#fff;padding:clamp(14px,2.4vw,24px) clamp(18px,3vw,32px);border-radius:10px;box-shadow:0 10px 40px rgba(0,0,0,.35)}
+.plate>img{height:clamp(84px,12vw,140px)!important;margin:0!important;filter:none!important}
 .brand .logo{font-size:19px}
 .brand .logo small{font-size:15px;font-weight:700;color:var(--on-dark-muted);margin-left:.5em;letter-spacing:.08em}
 .nav ul{list-style:none;margin:0;padding:0;display:flex;gap:2px}
@@ -53,7 +60,7 @@ a{color:inherit}
 .hero h1{margin:0;font:900 clamp(44px,7.5vw,88px)/1.15 var(--sans);letter-spacing:.06em}
 .hero h1 .logo{font-size:1em;gap:.12em}
 .hero h1 .logo img{height:1.45em;margin-top:-.28em;filter:drop-shadow(0 4px 18px rgba(0,0,0,.45))}
-.hero h1 .sub{display:block;margin-top:.12em;font-size:.5em;letter-spacing:.3em;color:var(--on-dark)}
+.hero h1 .sub{display:block;margin-top:.45em;font-size:.5em;letter-spacing:.3em;color:var(--on-dark)}
 .hero .rule{width:min(420px,70%);height:2px;background:var(--red);margin:24px 0 20px}
 .hero .lead{max-width:640px;font-size:clamp(16px,1.8vw,19px);color:var(--on-dark)}
 .hero .note{margin-top:18px;font-size:14px;color:var(--on-dark-muted)}
@@ -231,7 +238,7 @@ footer{background:var(--ink);color:var(--on-dark-muted);font-size:13px;padding:2
 
 <nav class="nav" aria-label="主選單">
   <div class="wrap">
-    <a class="brand" href="#top"><span class="logo">戈22<img src="img/gobi-plus-mark.svg" alt="A+"><small>準備站</small></span></a>
+    <a class="brand" href="#top"><span class="logo"><span class="wm" data-wm="small" role="img" aria-label="戈22"></span><img src="img/gobi-plus-mark.svg" alt="A+"><small>準備站</small></span></a>
     <ul>
       <li><a href="#ch1"><b>壹</b>資格</a></li>
       <li><a href="#ch2"><b>貳</b>時間軸</a></li>
@@ -246,7 +253,7 @@ footer{background:var(--ink);color:var(--on-dark-muted);font-size:13px;padding:2
   <div class="wrap">
     <div class="road"><span class="seal">戈</span>台大EMBA戈友會</div>
     <div class="kicker">給跑過 A、B 隊的戈友</div>
-    <h1><span class="logo">戈22<img src="img/gobi-plus-mark.svg" alt="A+"></span><span class="sub">準備站</span></h1>
+    <h1><span class="logo plate"><span class="wm big" data-wm="big" role="img" aria-label="戈22 第二十二屆商學院戈壁挑戰賽"></span><img src="img/gobi-plus-mark.svg" alt="A+"></span><span class="sub">準備站</span></h1>
     <div class="rule"></div>
     <p class="lead">一天一夜、121 公里、自導航、自補給。我們再回一次戈壁：挑戰自己、享受賽道，也照顧身邊需要幫忙的人。</p>
     <p class="note">本頁依〈戈21 A+ 賽事章程〉（2026 年 4 月版）整理。標示 <span class="ref">參考戈21</span> 的日期與數字，戈22 可能調整，一切以戈22 正式章程為準。</p>
@@ -440,14 +447,45 @@ footer{background:var(--ink);color:var(--on-dark-muted);font-size:13px;padding:2
 
 <section class="closing">
   <div class="wrap">
-    <div class="logo" style="font-size:clamp(36px,5vw,56px);margin-bottom:24px">戈22<img src="img/gobi-plus-mark.svg" alt="A+"></div>
+    <div class="logo plate" style="margin-bottom:32px"><span class="wm big" data-wm="big" role="img" aria-label="戈22 第二十二屆商學院戈壁挑戰賽"></span><img src="img/gobi-plus-mark.svg" alt="A+"></div>
     <h2>再回一次戈壁<span>這次，一天走完</span></h2>
     <p>繼續是勇氣，收兵亦是智慧。每一種選擇，都是圓滿。</p>
   </div>
 </section>
-<footer><span class="logo" style="font-size:16px;color:var(--on-dark)">戈22<img src="img/gobi-plus-mark.svg" alt="A+"></span>　台大EMBA戈友會・準備小組<br>資料來源：玄奘之路戈壁挑戰賽 A+ 賽事章程（戈21，2026 年 4 月）。本頁為戈友內部整理，以大會公布的戈22 章程與補充章程為準。</footer>
+<footer><span class="logo" style="font-size:16px;color:var(--on-dark)"><span class="wm" data-wm="small" role="img" aria-label="戈22"></span><img src="img/gobi-plus-mark.svg" alt="A+"></span>　台大EMBA戈友會・準備小組<br>資料來源：玄奘之路戈壁挑戰賽 A+ 賽事章程（戈21，2026 年 4 月）。本頁為戈友內部整理，以大會公布的戈22 章程與補充章程為準。</footer>
+
+<!-- 斑駁質感：橫向刷痕＋細碎斑點，把字挖出不規則的白縫 -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <filter id="distress" x="-5%" y="-5%" width="110%" height="110%" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.004 0.16" numOctaves="3" seed="11" result="n1"/>
+    <feColorMatrix in="n1" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  16 0 0 0 -9.6" result="streak"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="2" seed="4" result="n2"/>
+    <feColorMatrix in="n2" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  14 0 0 0 -8.8" result="speck"/>
+    <feMerge result="holes"><feMergeNode in="streak"/><feMergeNode in="speck"/></feMerge>
+    <feComposite in="SourceGraphic" in2="holes" operator="out"/>
+  </filter>
+</defs></svg>
 
 <script>
+/* 「戈22」屆別字樣：紅色、粗黑體、向右傾斜，大尺寸加斑駁質感與副標 */
+const WM_RED = '#E60012';
+function wordmark(big){
+  const sub = big ? `<text class="wm-sub" x="40" y="240" font-family="Noto Sans TC" font-weight="500" font-size="32" fill="${WM_RED}" textLength="400" lengthAdjust="spacingAndGlyphs">第二十二屆商學院戈壁挑戰賽</text>` : '';
+  return `<svg viewBox="0 0 440 ${big ? 250 : 200}" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g class="wm-all"><g transform="skewX(-9)"><text class="wm-main" x="28" y="176" font-family="Noto Sans TC" font-weight="900" font-size="200" fill="${WM_RED}" stroke="${WM_RED}" stroke-width="${big ? 7 : 5}" stroke-linejoin="round" letter-spacing="-4"${big ? ' filter="url(#distress)"' : ''}>戈22</text>${sub}</g></g></svg>`;
+}
+document.querySelectorAll('[data-wm]').forEach(el => { el.innerHTML = wordmark(el.dataset.wm === 'big'); });
+/* 字型載入後：副標寬度對齊主字，再依實際字寬收緊 viewBox */
+function fitWordmarks(){
+  document.querySelectorAll('[data-wm] svg').forEach(svg => {
+    try {
+      const main = svg.querySelector('.wm-main').getBBox(), sub = svg.querySelector('.wm-sub');
+      if (sub) { sub.setAttribute('x', main.x + 20); sub.setAttribute('textLength', main.width - 26); }
+      const b = svg.querySelector('.wm-all').getBBox();
+      svg.setAttribute('viewBox', `${b.x - 6} ${b.y - 6} ${b.width + 12} ${b.height + 12}`);
+    } catch (e) {}
+  });
+}
+(document.fonts ? document.fonts.ready : Promise.resolve()).then(fitWordmarks);
 /* 時間軸：月份依戈21 日程推估戈22，正式日期公布後改這裡 */
 const TIMELINE = [
   { d:'2026.11–12', s:'即刻開始', t:'組成準備小組', why:'先把有意願的戈友找齊，目標 10 人以上出賽，拿「戈壁老炮兒」團隊獎。',
